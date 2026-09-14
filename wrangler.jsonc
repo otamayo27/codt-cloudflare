@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "codt-cloudflare",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-09-14",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "DATA","id": "923e56f831e1431994321098527f296a"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
